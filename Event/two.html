@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeout and clearTimeout</title>
+</head>
+<body>
+    <h2>set timeout and set interval</h2>
+    <button id="stop">clear</button>
+</body>
+    <script>
+
+        setTimeout (function() {
+            console.log("I'm good boy")
+        },0)
+
+        const fullName= function() {
+            console.log("name me kya rakha he")
+        }
+        setTimeout(fullName,2000)
+   
+       const heading = function (){
+         document.querySelector('h2').innerHTML = "Welcome here"
+       }
+       const changeMe =setTimeout(heading, 3000)
+
+    //    clearTimeout(changeMe,2000)
+
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(changeMe,2000)
+        console.log("Stopped")
+    })
+
+    
+    </script>
+</html>
